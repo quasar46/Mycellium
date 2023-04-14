@@ -4,6 +4,7 @@
   border: 1px solid #2d293d;
   border-radius: 4px;
   overflow: hidden;
+  height: 100%;
   & > * {
     outline: 1px solid #2d293d;
   }
@@ -21,7 +22,7 @@
     background: #f2633f;
     filter: blur(35px);
     transform: matrix(1, 0, 0, -1, 0, 0);
-    content:"";
+    content: "";
     width: 22px;
     height: 90px;
     position: absolute;
@@ -62,6 +63,8 @@
   color: white;
   font-style: italic;
   width: 100%;
+  flex: 1 0 auto;
+  height: 100%;
   p {
     line-height: 1.4;
     margin: 0;

@@ -71,6 +71,9 @@
       color: white;
       border: 1px solid #2d293d;
       border-radius: 4px;
+      &:focus {
+        outline: 1px solid #f2633f;
+      }
     }
   }
 
@@ -101,6 +104,14 @@
   }
 }
 
+.form__message {
+  color: var(--color-orange);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 !important;
+  margin-top: 20px;
+}
+
 .consultation__wrapper {
   display: flex;
   flex-direction: column;
@@ -115,6 +126,17 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  .btn-default {
+    br {
+      display: none;
+      @media (max-width: 767px) {
+        display: block;
+      }
+    }
+    @media (max-width: 767px) {
+      flex: 1 0 auto;
+    }
+  }
   .social {
     svg {
       path {
@@ -132,10 +154,22 @@
     gap: 12px;
     position: relative;
     padding-right: 30px;
+    &::before {
+      // content: "";
+      // position: absolute;
+      // width: 10px;
+      // height: 10px;
+      // display: block;
+      // background-color: red;
+      // right: 0;
+      // top: 50%;
+      // transform: translateY(-50%);
+    }
     svg {
+      // display: none;
       position: absolute;
       right: 0;
-      top: 60%;
+      top: 50%;
       transform: translateY(-50%);
     }
     &:hover {
@@ -151,6 +185,13 @@
     }
   }
   &:nth-child(2) {
+    span {
+      svg {
+        @media (max-width: 767px) {
+          right: 20px;
+        }
+      }
+    }
     a:first-child {
       @media (max-width: 767px) {
         width: 144px;

@@ -93,4 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".card-dwill").removeClass("hidden");
     document.querySelector("body").classList.add("hidden");
   });
+
+  // const submitForm = document.querySelector("#submit");
+  // submitForm.addEventListener("click", function (evt) {
+  //   evt.preventDefault();
+  // });
 });

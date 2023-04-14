@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  console.log("jq start");
   $(".marquee").marquee({
     //duration in milliseconds of the marquee
     duration: 15000,
@@ -16,6 +15,7 @@ $(document).ready(function () {
   $(".header__burger").on("click", function () {
     $(this).toggleClass("active");
     $("body").toggleClass("hidden");
+    $('.nav').toggleClass("active");
   });
 
   $(".nav__links a").click(function () {
@@ -70,4 +70,15 @@ $(document).ready(function () {
       });
     }
   });
+
+  $(document).ready(function() {
+    var mh = 0;
+    $(".swiper-reviews .swiper-slide").each(function () {
+        var h_block = parseInt($(this).height());
+        if(h_block > mh) {
+           mh = h_block;
+        };
+    });
+    $(".swiper-reviews .swiper-slide").height(mh);
+  })
 });

@@ -11,6 +11,7 @@
   color: white;
   transition: all 0.3s ease;
   cursor: pointer;
+  z-index: 10;
   span {
     color: var(--color-blue);
   }
